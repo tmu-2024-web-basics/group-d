@@ -1,0 +1,273 @@
+
+body{
+    background-color: #ffe7bb;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+	animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+header{
+    background-color: #fdb872;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin: 0 1em;
+    }
+}
+
+.hover-image-konbini:hover{
+    content: url('images/botton_convenience2.png');
+}
+
+.hover-image-surper:hover{
+    content: url('images/botton_surper2.png');
+}
+
+.hover-image-senmon:hover{
+    content: url('images/botton_senmon2.png');
+}
+
+.hover-image-cake:hover{
+    content: url('images/botton_cake2.png');
+}
+
+.topmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.name{
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+.page li :hover img {
+    transform: scale(1.2);
+}
+
+
+.toppage{
+    font-size: 2vw;
+}
+
+.topsent{
+    font-size: 1.2vw;
+}
+
+
+main{
+    padding: 1em;
+    color: rgb(135, 56, 31);
+    text-align: center;
+    
+    ul{
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.title{
+    font-size: 3vw;
+}
+
+.shohin{
+    font-size: 2vw
+}
+.namae{
+    font-size: 1.8vw
+}
+.hyoka{
+    font-size: 1.2vw;
+}
+
+
+ 
+  
+/*-------------------------画像切り替え---------------------------------*/
+  .container {
+    width: 40vw;
+    margin: 0 auto;
+  }
+  /* 500px以下の場合のスタイル */
+  @media screen and (max-width: 500px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 0px;
+  }
+  
+  .sub-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: -20vw;
+  }
+/*--------------------------------------------------------------------*/
+
+  
+
+/*横にならべる*/
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    padding-left: 10%;
+    padding-right: 20%;
+}
+
+.flex .image{
+        width: 400px;
+        margin: 0;
+        padding: 0;
+        margin-left: -20px;
+}
+
+.flex .image img{
+    width: 100%;
+    height: auto;
+}
+
+.flex .right{
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.flex .leht{
+    display: flow-root;
+}
+
+.flex .text{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+
+/*------------------------アコーディオンパネル--------------------------*/
+
+.accordion {
+    margin: 3em auto;
+    max-width: 60vw;
+    }
+    .toggle {
+    display: none;
+    }
+    .option {
+    position: relative;
+    margin-bottom: 1em;
+    }
+    .botton,
+    .content {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: all 0.3s;
+    }
+    .botton {
+    border: solid 1px rgb(135, 56, 31);
+    padding: 1em;
+    display: block;
+    color: rgb(135, 56, 31);
+    font-weight: bold;
+    }
+.botton::after,
+.botton::before {
+content: "";
+position: absolute;
+right: 1.25em;
+top: 1.25em;
+width: 2px;
+height: 0.75em;
+background-color: rgb(135, 56, 31);
+transition: all 0.3s;
+}
+.botton::after {
+transform: rotate(90deg);
+}
+.content {
+max-height: 0;
+overflow: hidden;
+}
+.content p {
+margin: 0;
+padding: 0.5em 1em 1em;
+font-size: 0.9em;
+line-height: 1.5;
+}
+.toggle:checked + .botton + .content {
+max-height: 500px;
+transition: all 1.5s;
+}
+.toggle:checked + .botton::before {
+transform: rotate(90deg) !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    position: fixed;
+    right: 3vw;
+    bottom: 3vw;
+}
+
+
+/*.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+}
+    */
+
+
+footer{
+    background-color: #fdb872;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+a.no-color-change{
+    color: white;
+    text-decoration: none;
+}
